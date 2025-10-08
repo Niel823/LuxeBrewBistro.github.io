@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LuxeBrew Bistro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Coffee Shop">
+  <meta name="description" content="Discover our cafe & restaurant menu with fresh coffee, delicious meals, online ordering, and table reservations in a cozy atmosphere.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/WebP" href="assets/logo.WebP"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="hero-section">
+    <nav aria-label="Primary">
+      <div class="logo">LuxeBrew Bistro</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="cart-nav">
+          <button id="cart-toggle" aria-expanded="false" aria-controls="cart-panel" title="Open cart">
+            <i class="fal fa-shopping-cart cart" aria-hidden="true"></i>
+            <span class="cart-count" aria-live="polite">0</span>
+          </button>
+          <div class="cart-dropdown" id="cart-panel" role="dialog" aria-label="Shopping Cart">
+            <h4>Your Cart</h4>
+            <ul class="cart-list"></ul>
+            <p class="cart-empty">Cart is empty</p>
+            <div class="cart-total">Total: ₱0.00</div>
+            <div class="cart-actions">
+              <button class="cart-clear" aria-label="Clear cart">Clear</button>
+              <button class="cart-checkout" aria-label="Checkout">Checkout</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hero-text">
+      <h1>About us</h1>
+      <p>At LuxeBrew Bistro, we believe coffee is more than just a drink — it’s a daily ritual, a comfort, and a shared experience. Nestled in the heart of Parañaque, our café brings together the warmth of a local coffeehouse and the sophistication of a modern bistro.</p>
+      <p>     </p>
+      <p>Our journey began with a simple idea: to create a space where people can slow down, connect, and enjoy handcrafted coffee and freshly prepared bites in a cozy yet refined setting. Every cup we serve is brewed with precision and passion, using premium beans sourced from sustainable farms. From smooth espressos to creamy lattes and signature blends, each drink tells a story of craftsmanship.</p>
+      <p>     </p>
+    </div>
+  </header>
+
+    <!-- Footer -->
+   <footer id="contact" class="site-footer animate-on-scroll">
+    <div class="footer-content">
+      <h2 class="logo">LuxeBrew Bistro</h2>
+      <p>Only in Parañaque, Metro Manila. Call 0912-923-1184</p>
+
+      <!-- Social Links -->
+      <div class="social-links">
+            <a href="https://www.instagram.com/lepaco_23/" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/Niel823" target="_blank" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.facebook.com/Niel.Alumbro23" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/nielalumbro23" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/Niel823" target="_blank" class="social-btn"><i class="fas fa-globe"></i></a>
+        </div>
+
+    <p class="copyright">
+  Designed & Developed by 
+  <a href="https://github.com/Niel823" target="_blank" class="animated-name">Niel Alumbro</a>
+  <a href="https://www.facebook.com/David.marcuss.mamaril" target="_blank" class="animated-name">David Marcuss L. Mamaril</a>
+  <a href="https://www.facebook.com/Tati.Keyl" target="_blank" class="animated-name">Tatiana Kyle Madriñan</a>
+    </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
+</body>
+</html>
+
+

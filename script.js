@@ -70,21 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.className = 'cart-item';
         li.innerHTML = `
-          <img src="₱{item.img}" alt="₱{item.name}" class="cart-thumb" />
-          <span class="cart-item-name" title="View details">₱{item.name}</span>
+          <img src="${item.img}" alt="${item.name}" class="cart-thumb" />
+          <span class="cart-item-name" title="View details">${item.name}</span>
           <div class="cart-item-controls">
             <button class="decrease" aria-label="Decrease quantity">-</button>
-            <span class="cart-item-qty">₱{item.qty}</span>
+            <span class="cart-item-qty">${item.qty}</span>
             <button class="increase" aria-label="Increase quantity">+</button>
           </div>
-          <span class="cart-item-price">₱{formatMoney(item.price * item.qty)}</span>
+          <span class="cart-item-price">${formatMoney(item.price * item.qty)}</span>
         `;
 
         li.addEventListener('click', e => e.stopPropagation());
 
         li.querySelector('.cart-item-name').addEventListener('click', e => {
           e.stopPropagation();
-          alert(`Order Details:\n\n₱{item.name}\nUnit: ₱{formatMoney(item.price)}\nQty: ₱{item.qty}\nTotal: ₱{formatMoney(item.price * item.qty)}`);
+          alert(`Order Details:\n\n${item.name}\nUnit: ${formatMoney(item.price)}\nQty: ${item.qty}\nTotal: ${formatMoney(item.price * item.qty)}`);
         });
 
         li.querySelector('.increase').addEventListener('click', e => {
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
-    cartTotal.textContent = `Total: ₱{formatMoney(total)}`;
+    cartTotal.textContent = `Total: ${formatMoney(total)}`;
     recalcBadge();
   };
 
@@ -163,16 +163,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const itemEl = e.target.closest('.menu-item');
       const name = itemEl.querySelector('h3').textContent.trim();
       const priceEl = itemEl.querySelector('.price');
-      const price = priceEl?.dataset?.price ?
-        parseFloat(priceEl.dataset.price) :
-        parseFloat((priceEl.textContent || '').replace(/[^\d.]/g, '')) || 0;
+      const price = priceEl?.dataset?.price
+        ? parseFloat(priceEl.dataset.price)
+        : parseFloat((priceEl.textContent || '').replace(/[^\d.]/g, '')) || 0;
       const img = itemEl.querySelector('img')?.getAttribute('src');
 
       const existing = cart.find(i => i.name === name);
       existing ? existing.qty++ : cart.push({ name, price, img, qty: 1 });
 
       updateCart();
-      showToast(`₱{name} added to cart ✔`);
+      showToast(`${name} added to cart ✔`);
       openCart();
     });
   });
